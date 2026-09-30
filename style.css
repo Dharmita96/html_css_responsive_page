@@ -1,0 +1,236 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Navbar Styles (Desktop) */
+.navbar {
+    display: flex; /* Flexbox requirement */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+    background-color: #eff6ff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+/* Hero Section Styles (Desktop) */
+.hero {
+    display: flex; /* Flexbox layout requirement */
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5%;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px);
+    gap: 3rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.25rem;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+}
+
+.hero-title span {
+    color: #2563eb;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 2rem;
+    max-width: 540px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Navbar Tablet Adjustments */
+    .logo {
+        font-size: 1.35rem; /* Smaller logo */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Smaller navigation link text */
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    .user-profile {
+        font-size: 0.9rem; /* Smaller username text */
+        padding: 0.4rem 0.8rem;
+    }
+
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+
+    /* Hero Section Tablet Adjustments */
+    .hero {
+        padding: 2.5rem 5%;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.25rem; /* Reduced text size */
+    }
+
+    .hero-description {
+        font-size: 1rem; /* Reduced text size */
+    }
+
+    .cta-btn {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .hero-image {
+        max-width: 380px; /* Reduced image size */
+    }
+}
+
+/* Mobile View (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    /* Navbar Mobile Adjustments */
+    .nav-links {
+        display: none; /* Hide links in mobile view */
+    }
+
+    .navbar {
+        padding: 1rem 4%;
+    }
+
+    /* Hero Section Mobile Adjustments */
+    .hero {
+        flex-direction: column; /* Vertical stacking using flex-direction: column */
+        text-align: center;
+        padding: 2rem 4%;
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.95rem;
+    }
+
+    .hero-title {
+        font-size: 1.85rem;
+    }
+
+    .hero-image-container {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .hero-image {
+        max-width: 280px; /* Further reduced image size for mobile */
+    }
+}
